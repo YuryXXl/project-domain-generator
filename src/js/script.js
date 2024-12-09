@@ -15,6 +15,41 @@ window.onload = function () {
 
       // Write the code here
       // Create a new array named 'domains' and push all the domain permutations in it
+      const whose = ["mine", "yours", "his", "hers"];
+      const pets = ["cat", "dog", "dragon", "chicken"];
+      const moves = ["runs", "flies", "swims", "shoots"];
+      const mails = ["@gmail", "@yahoo", "@hotmail"];
+      const dots = [".com", ".net", ".io"];
+
+      const domains = [];
+
+      // for (const who of whose) {
+      //   for (const pet of pets) {
+      //     for (const move of moves) {
+      //       for (const mail of mails) {  
+      //         for (const dot of dots) {
+      //         console.log(`${who}${pet}${move}${mail}${dot}`);
+      //         domains.push(`${who}${pet}${move}${mail}${dot}`);
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      whose.forEach((who) => {
+        pets.forEach((pet) => {
+          moves.forEach((move) => {
+            mails.forEach((mail) => {
+              dots.forEach((dot) => {
+                domains.push(`${who}${pet}${move}${mail}${dot}`);
+                console.log(`${who}${pet}${move}${mail}${dot}`);
+              });
+            });
+          });
+        });
+      });
+
+
+
 
       // Display the results
       domains.forEach((domain) => {
